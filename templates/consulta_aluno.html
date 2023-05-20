@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %} {{ estudante.nomeEstudante }} {% endblock %}
+
+{% block content %}
+    <h3>{{ estudante.nomeEstudante }}</h3>
+    <h5>Telefone de contato dos pais: {{ estudante.telefonePais }}</h5>
+    <h5>Frequência:</h5>
+    {% for x in frequencias %}
+        {% if x.presente == 1 %}
+            <p>{{ x.data }} --> Presente</p>
+        {% endif %}
+        {% if x.presente == 0 %}
+            <p>{{ x.data }} --> Ausente</p>
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}

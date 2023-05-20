@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %} Cadastrar Aluno {% endblock %}
+
+{% block content %}
+    <h3>Cadastre o aluno:</h3><br>
+    <form method="post">
+        <p>
+            <label for="nomeEstudante">Estudante</label>
+            <input type="text" name="nomeEstudante"
+                   placeholder="Nome">
+            </input>
+        </p>
+
+        <p>
+            <label for="salaEstudante">Sala</label>
+            <select name="salaEstudante" id="sala"  required>
+                <option value="">Selecione uma sala</option>
+                {% for sala in salas %}
+                    <option value="{{ sala.idSala }}">{{ sala.nomeSala }}</option>
+                {% endfor %}
+            </select>
+        </p>
+
+        <p>
+            <label for="telefonePais">Telefone dos pais</label>
+            <input type="number" name="telefonePais"
+                   placeholder="Telefone de contato">
+            </input>
+        </p>
+
+        <p>
+            <button type="submit">Cadastrar</button>
+        </p>
+    </form>
+{% endblock %}

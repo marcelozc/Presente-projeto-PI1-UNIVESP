@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+    <div class="card mb-3" style="max-width: 900px;">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="{{ url_for('static', filename='images/logo_idalina.jpeg')}}" class="card-img" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Instruções</h5>
+            <p class="card-text">Entre em Salas e escolha a sala de interesse para realizar a chamada.<br><br>Caso ainda não tenha cadastrado salas nem alunos, primeiro vá em Salas e crie a sala. Então vá em Cadastrar Aluno.<br><br>Para ver informações sobre a frequência de determinado aluno e outras informações vá em Consultar Dados de Frequência.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+{% endblock %}

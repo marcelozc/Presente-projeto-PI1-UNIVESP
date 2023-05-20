@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %} {{ sala.nomeSala }} {% endblock %}
+
+{% block content %}
+    <h4><a href="{{ url_for('chamada', sala_id=sala.idSala) }}">Clique aqui para iniciar a chamada do {{ sala.nomeSala }}</a></h4>
+    <hr>
+    <span>
+        <h3>{{ sala.nomeSala }}</h3>
+    </span>
+    <h4>Alunos:</h4>
+    <div >
+        {% for estudante in estudantes %}
+            <div >
+                <h5>{{ estudante.nomeEstudante }}</h5>
+                <td><form method="POST"
+                        action="{{ url_for('delete_aluno', estudante_id=estudante.idEstudante) }}">
+                    <input type="submit" style="min-width: 10%" value="Apagar Aluno"
+                        onclick="return confirm('Tem certeza que quer apagar o/a estudante {{ estudante.nomeEstudante }}?')">
+                </form></td>
+            </div><br>
+
+        {% endfor %}
+    </div>
+{% endblock %}

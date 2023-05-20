@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %} Consulta de Frequência {% endblock %}
+
+{% block content %}
+    <h3>Escolha o aluno que você quer consultar a frequência:</h3><br>
+        <div>
+        {% for x in salas %}
+            <div>
+                <td><b><h4><input type="text"  class="form-control-plaintext" id="idSala" name="idSala" value="{{ x.nomeSala }}"></h4></b></td>
+            </div>
+
+            <div >
+            {% for estudante in estudantes %}
+                {% if x.idSala == estudante.salaEstudante %}
+                    <td><b><a href="{{ url_for('consulta_aluno', estudante_id=estudante.idEstudante)}}">{{ estudante.nomeEstudante }}</a></b></td><br>
+                {% endif %}
+            {% endfor %}
+            </div>
+            <br>
+
+        {% endfor %}
+        </div>
+
+{% endblock %}

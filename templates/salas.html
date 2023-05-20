@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Salas{% endblock %}
+
+{% block content %}
+    <h3>Salas cadastradas</h3>
+    <p>Clique na sala de interesse para cadastrar a presença dos alunos</p>
+
+    <div>
+        {% for sala in salas %}
+            <div>
+                <td><b><a href="{{ url_for('sala', sala_id=sala.idSala)}}">{{ sala.nomeSala }}</a></b></td>
+            </div>
+            <div>
+                <td><form method="POST"
+                        action="{{ url_for('delete_sala', sala_id=sala.idSala) }}">
+                    <input type="submit" value="Apagar Sala"
+                        onclick="return confirm('Tem certeza que quer apagar a sala {{ sala.nomeSala }}?')">
+                </form></td>
+            </div><br>
+        {% endfor %}
+    </div>
+        <hr>
+        <h4><a href="{{ url_for('criar_sala') }}">Criar nova sala</a></h4>
+
+{% endblock %}

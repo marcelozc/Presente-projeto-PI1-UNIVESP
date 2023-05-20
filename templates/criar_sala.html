@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Criar Sala{% endblock %}
+
+{% block content %}
+    <h3>Criar Sala</h3><br>
+    <form method="post">
+        <p>
+            <label for="nomeSala">Sala</label>
+            <input type="text" name="nomeSala"
+                   placeholder="Sala">
+            </input>
+        </p>
+
+        <p>
+            <button type="submit">Criar</button>
+        </p>
+    </form>
+{% endblock %}

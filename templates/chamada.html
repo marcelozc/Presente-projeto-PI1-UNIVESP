@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %} Chamada - {{ sala.nomeSala }} {% endblock %}
+
+{% block content %}
+    <h3>Chamada da sala {{ sala.nomeSala }}</h3>
+    <br>
+    <form method="post">
+      <input type="date" name="data" id="data" required>
+        <br><br>
+
+        {% for estudante in estudantes %}
+        <div class="form-check form-check-inline">
+            <input type="text"  class="form-control-plaintext" id="nome" name="nome" value="{{ estudante.nomeEstudante }}">
+            <div class="form-check form-check-inline" >
+                <input class="form-check-input" type="checkbox" value="1" id="presente" name="presente">Presente
+            </div><div class="form-check form-check-inline" >     </div><div class="form-check form-check-inline" >     </div>
+            <div class="form-check form-check-inline" >
+                <input class="form-check-input" type="checkbox" value="0" id="presente" name="presente">Ausente
+            </div>
+        </div>
+        <br>
+        {% endfor %}
+        <br>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+{% endblock %}
