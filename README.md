@@ -1,7 +1,7 @@
 # presente
 Código desenvolvido como parte do Projeto Integrador 1 da Univesp, turma de Bariri-SP (turma do eixo de computação2021)
 <br><br>
-Meu primeiro projeto aqui no Github, ainda aprendendo suas funcionalisdades.<br><br>
+Meu primeiro projeto aqui no Github, ainda aprendendo suas funcionalidades.<br><br>
 
 Para rodar, é necessário inicialmente ter instalado o Python e pip e depois instalar o Flask e o SQLAlchemy. <br>
 É recomendado inicialmente criar um ambiente virtual. Para isso, siga os passos:<br><br>
