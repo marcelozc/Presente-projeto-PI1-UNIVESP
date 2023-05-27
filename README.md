@@ -1,5 +1,7 @@
 # presente
-Código desenvolvido como parte do Projeto Integrador 1 da Univesp, turma de Bariri-SP (turma do eixo de computação2021)
+Código desenvolvido como parte do Projeto Integrador 1 da Univesp, turma de Bariri-SP (turma do eixo de computação2021)<br>
+Grupo: Leandro José Facin e Marcelo Zanoni Camargo
+
 <br><br>
 Meu primeiro projeto aqui no Github, ainda aprendendo suas funcionalidades.<br><br>
 
